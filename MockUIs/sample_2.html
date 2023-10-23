@@ -25,7 +25,7 @@ crossorigin="anonymous">
         <div class="alert alert-success message-box" id="message-box"></div>
         <div class="mt-4 p-5 bg-primary text-white rounded">
         <h1>A page with input</h1> 
-        <p>This is a page that handles user input. If you enter an invalid email into the "Email" field and submit it will show you how an error message should look. Otherwise it will show how a success message should look. In addition, it uses custom styling in custom.css on top of bootstrap.</p> 
+        <p>This is a page that handles user input. If you enter an invalid email into the "Email" field and submit it will show you how an error message should look. Otherwise it will show how a success message should look. In addition, it uses custom styling in custom.css on top of bootstrap. You can the forms look different if you want on your UIs.</p> 
         </div>
     </div>
 
@@ -33,7 +33,7 @@ crossorigin="anonymous">
     </div>
     <div class="container mt-5">
         <div class="row">
-            <div>
+            <div class="col-sm-4 form-background">
                 <div class="mb-3 mt-3">
                     <label for="email" class="form-label">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Email" name="email">
@@ -44,8 +44,16 @@ crossorigin="anonymous">
                 </div>
                 <button class="btn btn-primary" onclick="submit_form()">Submit</button>
             </div>
+            <div class="col-sm-4 form-background">
+                <div class="container mt-5">
+                    <p>So, if you submit the information here then it will show you an error message if the email is invalid.</p>
+                    <p>Some more text</p>
+                </div>
+            </div>
         </div>
     </div>
+
+
     <script>
         function submit_form()
         {
