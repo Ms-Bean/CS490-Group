@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Coach Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+    crossorigin="anonymous">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container mt-4 p-5 bg-primary text-white rounded">
+            <h1>Coach Profile</h1>
+            <button class="btn btn-primary" onclick="showCoachInfo()">Coach Info</button>
+            <button class="btn btn-primary" onclick="showFutureWorkouts()">Future Workouts</button>
+            <button class="btn btn-primary" onclick="showNotifications()">Notifications</button>
+            <button class="btn btn-primary" onclick="showRequests()">Requests</button>
+            <button class="btn btn-primary" onclick="showClientList()">Client List</button>
+
+            <div id="coach-info" class="hidden mt-3">
+                <h2>Coach Info</h2>
+                <p>Username: CoachUsername</p>
+                <p>Email: coach@example.com</p>
+                <p>Contact: 123-456-7890</p>
+                <p>Number of Clients: 5</p>
+            </div>
+
+            <div id="future-workouts" class="hidden mt-3">
+                <h2>Future Workouts for Clients</h2>
+                <p>Client 1 - Future Workout: Sample details about future workout</p>
+                <p>Client 2 - Future Workout: Sample details about future workout</p>
+            </div>
+
+            <div id="notifications" class="hidden mt-3">
+                <h2>Notifications</h2>
+                <p>Notification 1: Sample notification from client</p>
+                <p>Notification 2: Sample notification from client</p>
+            </div>
+
+            <div id="requests" class="hidden mt-3">
+                <h2>Requests</h2>
+                <p>Request 1: New customer request</p>
+            </div>
+
+            <div id="client-list" class="hidden mt-3">
+                <h2>Client List</h2>
+                <p>Client 1</p>
+                <p>Client 2</p>
+                <p>Client 3</p>
+                <p>Client 4</p>
+                <p>Client 5</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCoachInfo() {
+            hideAllSections();
+            document.getElementById('coach-info').classList.remove('hidden');
+        }
+
+        function showFutureWorkouts() {
+            hideAllSections();
+            document.getElementById('future-workouts').classList.remove('hidden');
+        }
+
+        function showNotifications() {
+            hideAllSections();
+            document.getElementById('notifications').classList.remove('hidden');
+        }
+
+        function showRequests() {
+            hideAllSections();
+            document.getElementById('requests').classList.remove('hidden');
+        }
+
+        function showClientList() {
+            hideAllSections();
+            document.getElementById('client-list').classList.remove('hidden');
+        }
+
+        function hideAllSections() {
+            document.getElementById('coach-info').classList.add('hidden');
+            document.getElementById('future-workouts').classList.add('hidden');
+            document.getElementById('notifications').classList.add('hidden');
+            document.getElementById('requests').classList.add('hidden');
+            document.getElementById('client-list').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>

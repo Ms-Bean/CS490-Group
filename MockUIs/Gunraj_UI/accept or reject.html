@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Client Approval</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+    crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4 p-5 bg-primary text-white rounded">
+        <h1>Client Approval</h1>
+        <h2>Client Name</h2>
+        <p>Do you want to accept this client?</p>
+        <button class="btn btn-success" onclick="acceptClient()">Yes</button>
+        <button class="btn btn-danger" onclick="rejectClient()">No</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function acceptClient() {
+            var messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = '<div class="alert alert-success">Client Accepted</div>';
+        }
+
+        function rejectClient() {
+            var messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = '<div class="alert alert-danger">Client Rejected</div>';
+        }
+    </script>
+</body>
+
+</html>

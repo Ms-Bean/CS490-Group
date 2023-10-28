@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Client Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+    crossorigin="anonymous">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container mt-4 p-5 bg-primary text-white rounded">
+            <h1>Client Profile</h1>
+            <button class="btn btn-primary" onclick="showClientInfo()">Client Info</button>
+            <button class="btn btn-primary" onclick="showPastWorkouts()">Show Past Workouts</button>
+            <button class="btn btn-primary" onclick="showFutureWorkouts()">Show Future Workouts</button>
+
+            <div id="client-info" class="hidden mt-3">
+                <h2>Client Info</h2>
+                <p>Username: JohnDoe123</p>
+                <p>Email: johndoe@example.com</p>
+                <p>Contact: 123-456-7890</p>
+            </div>
+
+            <div id="past-workouts" class="hidden mt-3">
+                <h2>Past Workouts</h2>
+                <p>Sample details about past workout 1</p>
+                <p>Sample details about past workout 2</p>
+            </div>
+
+            <div id="future-workouts" class="hidden mt-3">
+                <h2>Future Workouts</h2>
+                <p>Sample details about future workout 1</p>
+                <p>Sample details about future workout 2</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showClientInfo() {
+            document.getElementById('client-info').classList.remove('hidden');
+            document.getElementById('past-workouts').classList.add('hidden');
+            document.getElementById('future-workouts').classList.add('hidden');
+        }
+
+        function showPastWorkouts() {
+            document.getElementById('client-info').classList.add('hidden');
+            document.getElementById('past-workouts').classList.remove('hidden');
+            document.getElementById('future-workouts').classList.add('hidden');
+        }
+
+        function showFutureWorkouts() {
+            document.getElementById('client-info').classList.add('hidden');
+            document.getElementById('past-workouts').classList.add('hidden');
+            document.getElementById('future-workouts').classList.remove('hidden');
+        }
+    </script>
+</body>
+
+</html>
