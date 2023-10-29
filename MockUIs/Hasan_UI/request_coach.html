@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Coach</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        </nav>
+        <div class="alert alert-success message-box" id="message-box"></div>
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Request the Coach John Doe</h1>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <!-- Display coach information, abilities, strengths, achievements, and cost -->
+        <div class="coach-info">
+            <p><strong>Coach Name:</strong> John Doe</p>
+            <p><strong>Abilities:</strong> Strength training, Nutrition, Cardio</p>
+            <p><strong>Strengths:</strong> Motivation, Goal Setting, Tracking Progress</p>
+            <p><strong>Achievements:</strong> Certified Personal Trainer, 5 Years of Coaching Experience</p>
+            <p><strong>Cost:</strong> $50 per session</p>
+            <p><strong>Location:</strong> Los Angeles, CA, USA</p>
+            <p><strong>Distance to Coach:</strong> 10 miles</p>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <!-- Form for submitting the request -->
+        <form id="request-coach-form">
+            <div class="form-group">
+                <label for="request-details">Details for the coach (Optional):</label>
+                <textarea class="form-control" id="request-details" name="request-details" rows="4" placeholder="Enter specific details and reasons for your request"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="submitRequest()">Submit Request</button>
+        </form>
+    </div>
+
+
+    <script>
+        function submitRequest() {
+            // Here, you can add JavaScript to handle form submission and validation.
+            // Collect form data, validate it, and perform necessary actions.
+            // For now, we'll just show a success message.
+
+            document.getElementById("message-box").innerHTML = "<strong>Success</strong> Your request has been received and will be processed shortly.";
+            document.getElementById("message-box").setAttribute("class", "alert alert-success message-box");
+        }
+    </script>
+</body>
+</html>
