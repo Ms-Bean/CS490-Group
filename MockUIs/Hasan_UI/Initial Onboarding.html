@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Initial Onboarding</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="alert alert-success message-box" id="message-box"></div>
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Initial Onboarding Survey</h1>
+            <p>Fill out the form to get a good match with suitable coaches.</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <form id="onboarding-form">
+            <div class="form-group">
+                <label for="fitness-goals">Fitness Goals:</label>
+                <select class="form-control" id="fitness-goals" name="fitness-goals" multiple>
+                    <option value="weight-loss">Weight Loss</option>
+                    <option value="muscle-gain">Muscle Gain</option>
+                    <option value="general-health">General Health</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="current-fitness-level">Current Fitness Level:</label>
+                <select class="form-control" id="current-fitness-level" name="current-fitness-level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dietary-preferences">Dietary Preferences:</label>
+                <select class="form-control" id="dietary-preferences" name="dietary-preferences" multiple>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="medical-conditions">Medical Conditions:</label>
+                <select class="form-control" id="medical-conditions" name="medical-conditions" multiple>
+                    <option value="hypertension">Hypertension</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="asthma">Asthma</option>
+                    <option value="allergies">Allergies</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Here, you can add JavaScript to handle form submission and validation.
+            // Collect form data, validate it, and perform necessary actions.
+            // For now, we'll just show a success message.
+
+            document.getElementById("message-box").innerHTML = "<strong>Success</strong> Your onboarding information is submitted.";
+            document.getElementById("message-box").setAttribute("class", "alert alert-success message-box");
+        }
+    </script>
+
+</body>
+</html>
