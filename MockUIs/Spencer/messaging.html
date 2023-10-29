@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+crossorigin="anonymous">
+<link rel="stylesheet" href="../custom.css">
+<!DOCTYPE html>
+<body>
+  <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <div class="container-fluid">
+        <h1>App Name</h1>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="sample_page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sample_2.html">sample_2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Non-existent page</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+      <h1>Message your client Steve</h1> 
+    </div>    
+    <div class="card">
+        <div class="card-body">
+          <strong>You: </strong>Did you finish your workout today?
+        </div>
+    </div>    
+    <div class="card">
+        <div class="card-body">
+          <strong>Steve: </strong>Nope.
+        </div>
+    </div>    
+    <div class="card">
+        <div class="card-body">
+        <strong>You: </strong>Why not?
+        </div>
+    </div>    
+    <div class="card">
+        <div class="card-body">
+            <strong>Steve: </strong>Too lazy.
+        </div>
+    </div>
+  </div>
+  <div class="fixed-bottom">
+  <div class="row">
+    <div class="col-xs-6">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle col-xs-6" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Message Other Clients
+        </button>
+      </div>
+      </div>
+      <div class="col-xs-6">
+      <input type="text" class="form-control input-lg" id="password" placeholder="message" name="message">
+      </div>
+
+    <div class="col-xs-6">
+    <button class="btn btn-primary col-xs-6" onclick="submit_form()">Send</button>
+    </div>
+</div>
+</div>
+</div>
+  </div>
+</body>
