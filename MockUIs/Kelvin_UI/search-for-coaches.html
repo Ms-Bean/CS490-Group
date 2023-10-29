@@ -39,34 +39,52 @@
     <!-- Main content -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4">
-                <div class="accordion" id="filter-accordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filter-collapse-one" aria-expanded="true" aria-controls="filter-collapse-one">
-                                Filter Option #1
-                            </button>
-                        </h2>
-                        <div class="accordion-collapse collapse show" id="filter-collapse-one">
-                            <div class="accordion-body">
-                                <strong>Form for Filter Option #1 goes here</strong>
+            <div class="col-4 d-flex flex-column gap-3">
+                <!-- Search filters -->
+                <div class="card">
+                    <strong class="card-header">Search Filters</strong>
+                    <div class="accordion accordion-flush" id="filter-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filter-collapse-one" aria-expanded="true" aria-controls="filter-collapse-one">
+                                    Filter Option #1
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse show" id="filter-collapse-one">
+                                <div class="accordion-body">
+                                    Form for Filter Option #1 goes here
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filter-collapse-two" aria-controls="filter-collapse-two">
-                                Filter Option #2
-                            </button>
-                        </h2>
-                        <div class="accordion-collapse collapse" id="filter-collapse-two">
-                            <div class="accordion-body">
-                                <strong>Form for Filter Option #2 goes here</strong>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filter-collapse-two" aria-controls="filter-collapse-two">
+                                    Filter Option #2
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="filter-collapse-two">
+                                <div class="accordion-body">
+                                    Form for Filter Option #2 goes here
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Search sorters -->
+                <!-- TODO: Make it so that clicking one button changes its class to active, while removing active from the current active class -->
+                <div class="card">
+                    <strong class="card-header">Sort Options</strong>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertial radio toggle button group for search ordering">
+                        <input type="radio" class="btn-check" name="sort-btn-radio" id="sort-btn-radio1" autocomplete="off" checked>
+                        <label for="sort-btn-radio1" class="btn btn-outline-primary">Order Option #1</label>
+                        <input type="radio" class="btn-check" name="sort-btn-radio" id="sort-btn-radio2" autocomplete="off">
+                        <label for="sort-btn-radio2" class="btn btn-outline-primary">Order Option #2</label>
+                        <input type="radio" class="btn-check" name="sort-btn-radio" id="sort-btn-radio3" autocomplete="off">
+                        <label for="sort-btn-radio3" class="btn btn-outline-primary">Order Option #3</label>
+                    </div>
+                </div>
             </div>
+
             <div class="col-8">Hello</div>
         </div>
     </div>
