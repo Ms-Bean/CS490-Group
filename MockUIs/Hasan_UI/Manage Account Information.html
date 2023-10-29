@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="alert alert-success message-box" id="message-box"></div>
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Manage Your Account Information</h1>
+            </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="user-info">
+            <p><strong>Email Address:</strong> <span id="display-email">user@example.com</span> <button class="btn btn-secondary" onclick="editEmail()">Edit</button></p>
+            <p><strong>Password:</strong> ********* <button class="btn btn-secondary" onclick="editPassword()">Edit</button></p>
+            <p><strong>Name:</strong> <span id="display-name">John Doe</span> <button class="btn btn-secondary" onclick="editName()">Edit</button></p>
+            <p><strong>Phone number:</strong> <span id="display-phone">123-456-7890</span> <button class="btn btn-secondary" onclick="editPhone()">Edit</button></p>
+            <p><strong>Location:</strong> <span id="display-location">New York</span> <button class="btn btn-secondary" onclick="editLocation()">Edit</button></p>
+        </div>
+    </div>
+
+    <script>
+        function editEmail() {
+            // Replace the email display with an input field for editing
+            const emailElement = document.getElementById("display-email");
+            const emailValue = emailElement.textContent;
+            emailElement.innerHTML = `<input type="email" class="form-control" id="email" name="email" value="${emailValue}">`;
+        }
+
+        function editPassword() {
+            // Replace the password display with an input field for editing
+            const passwordElement = document.getElementById("display-password");
+            passwordElement.innerHTML = `
+                <input type="password" class="form-control" id="new-password" name="new-password" placeholder="Enter your new password">
+                <button class="btn btn-primary" onclick="savePasswordChanges()">Save</button>
+            `;
+        }
+
+        function editName() {
+            // Replace the name display with an input field for editing
+            const nameElement = document.getElementById("display-name");
+            const nameValue = nameElement.textContent;
+            nameElement.innerHTML = `<input type="text" class="form-control" id="name" name="name" value="${nameValue}">`;
+        }
+
+        function editPhone() {
+            // Replace the phone number display with an input field for editing
+            const phoneElement = document.getElementById("display-phone");
+            const phoneValue = phoneElement.textContent;
+            phoneElement.innerHTML = `<input type="tel" class="form-control" id="phone" name="phone" value="${phoneValue}">`;
+        }
+
+        function editLocation() {
+            // Replace the location display with an input field for editing
+            const locationElement = document.getElementById("display-location");
+            const locationValue = locationElement.textContent;
+            locationElement.innerHTML = `<input type="text" class="form-control" id="location" name="location" value="${locationValue}">`;
+        }
+
+        // You can add more logic for saving changes if needed
+        function savePasswordChanges() {
+            // Implement the logic for saving the password here
+            alert("Password updated successfully.");
+        }
+    </script>
+</body>
+</html>
