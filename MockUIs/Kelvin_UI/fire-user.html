@@ -16,7 +16,7 @@
     <!-- Buttons to open modals -->
     <div class="container">
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmationModal">Fire Coach / Client Confirmation Modal</button>
-        <button class="btn btn-primary">Open Termination Modal</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#afterTerminationModal">Open Termination Modal</button>
     </div>
 
     <!-- Fire Coach / Client Modal -->
@@ -30,14 +30,38 @@
                 </div>
                 <div class="modal-body">
                     <p>The following will happen</p>
-                    <ul class="list-group list-group-numbered list-group-flush ps-3">
+                    <ol class="list-group list-group-numbered list-group-flush ps-3">
                         <li class="list-group-item">All correspondence between you and the other user will be deleted</li>
                         <li class="list-group-item">Your payments to/from the other user will cease</li>
-                    </ul>
+                    </ol>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
                     <button class="btn btn-danger" type="button">Fire user</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- After termination modal -->
+    <div class="modal fade" id="afterTerminationModal" tabindex="-1" aria-labelledby="afterTerminationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="afterTerminationModalLabel">Coach/Client has been fired</h1>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The following has been completed</p>
+                    <ul class="list-group list-group-flush ps-3">
+                        <li class="list-group-item">✓ Deleted chat records</li>
+                        <li class="list-group-item">✓ Removed financial obligations</li>
+                        <li class="list-group-item">✓ Notified the Coach/Client</li>
+                        <li class="list-group-item">✓ Etc.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
